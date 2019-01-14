@@ -1,0 +1,8 @@
+configuration Release
+#restore nuget packages before running build
+before build
+   -nuget restore
+#package web application project for web deploy
+build:
+   verbosity:minimal
+   publish_wap:true
